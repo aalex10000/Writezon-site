@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://www.writezon.it
+
+logo_url: /assets/logo.png
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Copertina", name: "thumbnail", widget: "image" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "librodelmese"
+    label: "Libro del Mese"
+    folder: "content/librodelmese"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Autore", name: "autore", widget: "string" }
+      - { label: "Link Amazon", name: "link", widget: "string" }
+      - { label: "Descrizione", name: "body", widget: "markdown" }
+
+  - name: "autoreDelMese"
+    label: "Autore del Mese"
+    folder: "content/autoredelmese"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nome Autore", name: "nome", widget: "string" }
+      - { label: "Biografia", name: "body", widget: "markdown" }
+      - { label: "Immagine", name: "immagine", widget: "image" }
