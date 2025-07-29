@@ -1,22 +1,67 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Writezon CMS</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", function(user) {
-          if (!user) {
-            window.netlifyIdentity.on("login", function() {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </body>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writezon - La tua Libreria Autore</title>
+  <meta name="description" content="Il sito ufficiale di Alessandro Allegro, autore di romanzi, manuali e racconti. Scopri i suoi libri, articoli e progetti.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fcf8f3; color: #222; }
+    header, footer { background: #3f3d56; color: white; text-align: center; padding: 1rem; }
+    nav { background: #e0e0e0; padding: 1rem; text-align: center; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #333; }
+    main { padding: 2rem; }
+    section { margin-bottom: 2rem; }
+    .newsletter input[type="email"] { padding: 0.5rem; width: 250px; }
+    .newsletter button { padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Writezon - La tua Libreria Autore</h1>
+    <p>Scopri i libri di Alessandro Allegro</p>
+  </header>
+
+  <nav>
+    <a href="#libro-del-mese">📖 Libro del Mese</a>
+    <a href="#autore-del-mese">👤 Autore del Mese</a>
+    <a href="#progetti">📚 Progetti</a>
+    <a href="#newsletter">📬 Newsletter</a>
+  </nav>
+
+  <main>
+    <section id="libro-del-mese">
+      <h2>📖 Libro del Mese</h2>
+      <p><strong>L'Orologio di Atlantide</strong> - Un romanzo tra storia e mistero.</p>
+      <p><a href="https://amzn.eu/d/fw5fKfP" target="_blank">Acquista su Amazon</a></p>
+    </section>
+
+    <section id="autore-del-mese">
+      <h2>👤 Autore del Mese</h2>
+      <p><strong>Alessandro Allegro</strong> - Autore di romanzi, manuali e opere creative indipendenti.</p>
+    </section>
+
+    <section id="progetti">
+      <h2>📚 I miei Progetti</h2>
+      <ul>
+        <li><strong>Il Perfetto Magazziniere</strong> – Manuale tecnico per lavoratori del settore logistico.</li>
+        <li><strong>Il Naufrago Geniale</strong> – Storia di sopravvivenza e intelligenza fuori dal comune.</li>
+      </ul>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+      <h2>📬 Iscriviti alla Newsletter</h2>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Inserisci la tua email" required />
+        <button type="submit">Iscriviti</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Writezon. Tutti i diritti riservati. Autore: Alessandro Allegro.
+  </footer>
+</body>
 </html>
